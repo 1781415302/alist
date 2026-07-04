@@ -222,6 +222,8 @@ func _fs(g *gin.RouterGroup) {
 	g.Any("/list", handles.FsList)
 	g.Any("/search", middlewares.SearchIndex, handles.Search)
 	g.Any("/get", handles.FsGet)
+	g.POST("/playcount/report", handles.ReportPlay)
+	g.POST("/playcount/query", handles.GetPlayCounts)
 	g.Any("/other", handles.FsOther)
 	g.GET("/lark/export/download", handles.LarkExportDownload)
 	g.Any("/dirs", handles.FsDirs)

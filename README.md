@@ -41,6 +41,14 @@
 
 English | [中文](./README_cn.md) | [日本語](./README_ja.md) | [Contributing](./CONTRIBUTING.md) | [CODE_OF_CONDUCT](./CODE_OF_CONDUCT.md)
 
+## Fork changes
+
+This fork adds persistent media play count tracking:
+
+- Adds a play count model, database migration, and operation helpers.
+- Adds API handlers for `/api/fs/playcount/report` and `/api/fs/playcount/query`.
+- Stores counts server-side so both `alist-web` and `AlistClient` can report playback and query the same counters.
+
 ## Features
 
 - [x] Multiple storages
